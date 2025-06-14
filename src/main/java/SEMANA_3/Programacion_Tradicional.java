@@ -9,15 +9,14 @@ public class Programacion_Tradicional {
     /**
      * Permite al usuario ingresar las temperaturas para cada día de la semana.
      * Incluye una validación básica para asegurar que se ingresen valores numéricos.
-     *
-     * @return Un arreglo de tipo double que contiene las 7 temperaturas diarias ingresadas.
+     
      */
     public static double[] obtenerTemperaturasDiarias() {
         Scanner escaner = new Scanner(System.in);
         double[] temperaturasGuayaquil = new double[7]; // Array para 7 días
         String[] nombresDias = {"Lunes soleado", "Martes nublado", "Miercoles lluvioso", "Jueves ventoso", "Viernes calido", "Sabado playero", "Domingo tranquilo"};
 
-        System.out.println("\n--- ¡Hola! Vamos a registrar la temperatura de la semana en Guayaquil ---");
+        System.out.println("\n--- ¡Hola! Vamos a registrar la temperatura de la semana en la Ciudad de Guayaquil ---");
         System.out.println("Por favor, ingresa la temperatura promedio en grados Celsius para cada día:");
 
         for (int i = 0; i < 7; i++) {
@@ -58,10 +57,8 @@ public class Programacion_Tradicional {
     /**
      * Método principal (punto de entrada) del programa.
      * Orquesta la recolección de datos y el cálculo del promedio semanal del clima.
-     * Este es el método que NetBeans ejecutará al correr el programa.
-     *
-     * @param args Argumentos de línea de comandos (no utilizados en este programa).
-     */
+     * Este es el método que NetBeans ejecutará al correr el programa.*/
+    
     public static void main(String[] args) {
         System.out.println("--- Inicio del Reporte Climático Semanal (Programación Tradicional) ---");
 
@@ -72,7 +69,7 @@ public class Programacion_Tradicional {
         double promedioFinal = calcularPromedioSemanal(misTemperaturas);
 
         // 3. Mostrar el resultado final
-        System.out.printf("\n¡Excelente! El promedio de temperatura para esta semana en Guayaquil es: %.2f°C\n", promedioFinal);
+        System.out.printf("\n¡Excelente! El promedio de temperatura para esta semana en la Ciudad de Guayaquil es: %.2f°C\n", promedioFinal);
         System.out.println("--- Fin del Reporte ---");
     }
 }

@@ -14,8 +14,7 @@ public class Programacion_Orientada_a_Objetos_POO { // Nombre de la clase princi
      * Constructor de la clase Programacion_Orientada_a_Objetos_POO.
      * Se llama automaticamente cuando creas un nuevo objeto de esta clase.
      * Inicializa la lista de temperaturas y la ubicacion.
-     *
-     * @param ubicacion La ciudad o lugar para el que se esta haciendo el pronostico.
+     
      */
     public Programacion_Orientada_a_Objetos_POO(String ubicacion) {
         this.temperaturasObservadas = new ArrayList<>();
@@ -76,25 +75,25 @@ public class Programacion_Orientada_a_Objetos_POO { // Nombre de la clase princi
 
         // 1. Crear una instancia (un objeto) de nuestra clase de pronostico para "Guayaquil"
         // Observa como creamos un objeto y luego interactuamos con el.
-        Programacion_Orientada_a_Objetos_POO miPronosticoSantaLucia = new Programacion_Orientada_a_Objetos_POO("SantaLucia");
+        Programacion_Orientada_a_Objetos_POO miPronosticoCantonSantaLucia = new Programacion_Orientada_a_Objetos_POO("CantonSantaLucia");
 
         // 2. Registrar las temperaturas usando el metodo del objeto creado
-        miPronosticoSantaLucia.registrarTemperaturas();
+        miPronosticoCantonSantaLucia.registrarTemperaturas();
 
         // 3. Calcular el promedio de temperatura usando el metodo del objeto
-        double promedioFinalPOO = miPronosticoSantaLucia.calcularPromedio();
+        double promedioFinalPOO = miPronosticoCantonSantaLucia.calcularPromedio();
 
         // 4. Mostrar el resultado final
         System.out.printf("\n¡Perfecto! El promedio de temperatura en %s para esta semana es: %.2f oC\n",
-                miPronosticoSantaLucia.ubicacion, promedioFinalPOO);
+                miPronosticoCantonSantaLucia.ubicacion, promedioFinalPOO);
         System.out.println("--- Fin del Sistema de Pronostico ---");
 
-        // Mini ejemplo de otro pronostico para demostrar que los objetos son independientes:
+        // Ejemplo de otro pronostico para demostrar que los objetos son independientes:
         System.out.println("\n--- Otro pronostico de ejemplo (POO) ---");
-        Programacion_Orientada_a_Objetos_POO pronosticoCuenca = new Programacion_Orientada_a_Objetos_POO("Cuenca");
-        pronosticoCuenca.registrarTemperaturas();
-        double promedioCuenca = pronosticoCuenca.calcularPromedio();
+        Programacion_Orientada_a_Objetos_POO pronosticoCiudadCuenca = new Programacion_Orientada_a_Objetos_POO("CiudadCuenca");
+        pronosticoCiudadCuenca.registrarTemperaturas();
+        double promedioCuenca = pronosticoCiudadCuenca.calcularPromedio();
         System.out.printf("\nEl promedio de temperatura en %s es: %.2f oC\n",
-                pronosticoCuenca.ubicacion, promedioCuenca);
+                    pronosticoCiudadCuenca.ubicacion, promedioCuenca);
     }
 }
